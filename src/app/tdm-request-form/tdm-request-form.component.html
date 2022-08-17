@@ -1,0 +1,21 @@
+<mat-card>
+    <form [formGroup]="tdmForm" (ngSubmit)="generateIMEINumber(tdmForm)">
+        <div class="title">
+            IMEI Generator        
+        </div>
+        <mat-form-field  appearance="outline">
+            <mat-label>SKU</mat-label>
+            <input matInput formControlName="sku">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>TAC</mat-label>
+            <input matInput formControlName="tac" maxlength="8">
+            <mat-error *ngIf="tdmForm.get('tac')?.errors?.['pattern']">Please enter valid TAC number.</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Count</mat-label>
+            <input type="number" min="1" matInput formControlName="count" >
+        </mat-form-field>
+        <button type="submit" [disabled]="tdmForm.invalid"  mat-raised-button mat-button color="primary">Download</button>
+    </form>
+</mat-card>

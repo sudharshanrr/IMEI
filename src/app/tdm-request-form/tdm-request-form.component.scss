@@ -1,0 +1,17 @@
+mat-card{
+    background-color:#ffffff;;
+    width: 20%;
+    margin: 40px auto auto auto;
+    .title{
+        width: fit-content;
+        margin: auto auto 30px;
+        font-weight: bold;
+    }
+    mat-form-field{
+        display: block;
+    }
+    button{
+        display: block;
+        margin: auto;
+    }
+}
