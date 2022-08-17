@@ -16,6 +16,9 @@
             <mat-label>Count</mat-label>
             <input type="number" min="1" matInput formControlName="count" >
         </mat-form-field>
-        <button type="submit" [disabled]="tdmForm.invalid"  mat-raised-button mat-button color="primary">Download</button>
+        <button type="submit" [disabled]="tdmForm.invalid"  mat-raised-button mat-button color="primary">
+        <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="download"></mat-icon>
+         Download
+        </button>
     </form>
 </mat-card>
