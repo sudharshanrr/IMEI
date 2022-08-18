@@ -22,8 +22,10 @@ export class TdmRequestFormComponent implements OnInit {
   }
 
 
-  generateIMEINumber(tdmForm:any):void {
-    this.downloadXlsService.downloadXLSX(tdmForm);
+  generateIMEINumber(tdmForm:FormGroup):void {
+    this.downloadXlsService.downloadXLSX(tdmForm).then((data)=>{
+      this.tdmForm.reset()
+    });
   }
 
 }
